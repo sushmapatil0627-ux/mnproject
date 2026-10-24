@@ -1,0 +1,1164 @@
+/* =========================================
+   1. GOOGLE FONTS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================
+   2. ROOT VARIABLES
+========================================= */
+
+:root {
+    --ink: #18243a;
+    --muted: #66738a;
+
+    --primary: #086288;
+    --primary-dark: #97D7FF;
+
+    --pale: #f4f6ff;
+    --line: #e5e9f2;
+    --white: #ffffff;
+
+    --green: #147d55;
+    --amber: #9a5b00;
+    --red: #b42318;
+
+    --background: #AEC4D4;
+}
+
+
+/* =========================================
+   3. GLOBAL STYLES
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.55;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Manrope', sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #a5a0ff;
+    outline-offset: 2px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================
+   4. HEADER
+========================================= */
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+
+    padding: 18px max(5%, calc((100% - 1160px) / 2));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+
+/* Brand Section */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border-radius: 13px;
+
+    width: 46px;
+    height: 46px;
+
+    font-weight: 800;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+}
+
+.brand h1 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.brand p {
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* =========================================
+   5. NAVIGATION BAR
+========================================= */
+
+.site-header nav {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    border: none;
+    background: transparent;
+
+    color: #5b6579;
+
+    padding: 10px 14px;
+    border-radius: 10px;
+
+    font-weight: 700;
+    font-size: 13px;
+
+    transition: 0.25s ease;
+}
+
+.nav-btn:hover {
+    background: var(--pale);
+    color: var(--primary);
+}
+
+.nav-btn.active {
+    background: var(--pale);
+    color: var(--primary);
+}
+
+
+/* =========================================
+   6. MAIN CONTAINER
+========================================= */
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 30px 22px;
+}
+
+
+/* =========================================
+   7. HERO SECTION
+========================================= */
+
+.hero {
+    background: linear-gradient(
+        120deg,
+        #010736,
+        #7F5D99 65%,
+        #22396F
+    );
+
+    border-radius: 24px;
+
+    padding: 44px 48px;
+
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
+
+    margin-bottom: 36px;
+    overflow: hidden;
+}
+
+.hero > div:first-child {
+    max-width: 570px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    color: #8983ff;
+}
+
+.hero .eyebrow {
+    color: #c9c6ff;
+}
+
+.hero h2 {
+    font-size: clamp(32px, 5vw, 49px);
+
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+
+    margin: 12px 0;
+}
+
+.hero h2 span {
+    color: #d9d7ff;
+}
+
+.hero p {
+    color: #e0e3ff;
+    max-width: 520px;
+    margin-bottom: 0;
+}
+
+
+/* Hero Information Card */
+
+.hero-card {
+    min-width: 215px;
+    max-width: 240px;
+
+    padding: 24px;
+
+    background: #ffffff17;
+    border: 1px solid #ffffff38;
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(8px);
+}
+
+.hero-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero-card strong {
+    font-size: 15px;
+}
+
+.hero-card p {
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   8. SECTION HEADINGS
+========================================= */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 27px;
+    letter-spacing: -0.6px;
+    margin-top: 5px;
+}
+
+
+/* Small Labels */
+
+.pill {
+    background: #eeedff;
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    padding: 7px 12px;
+    border-radius: 30px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   9. PAGE SECTIONS
+========================================= */
+
+.view {
+    display: none;
+}
+
+.view.active-view {
+    display: block;
+}
+
+
+/* =========================================
+   10. CONTENT PANELS
+========================================= */
+
+.panel {
+    background: var(--white);
+
+    border: 1px solid var(--line);
+    border-radius: 18px;
+
+    padding: 28px;
+
+    box-shadow: 0 8px 30px #17213b08;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   11. COMPLAINT FORM GRID
+========================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 19px 22px;
+}
+
+
+/* Form Labels */
+
+label {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    font-weight: 700;
+    font-size: 13px;
+
+    color: #364258;
+}
+
+
+/* Full Width Fields */
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================
+   12. INPUT FIELDS
+========================================= */
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #dce2ee;
+    border-radius: 9px;
+
+    background: var(--white);
+    color: var(--ink);
+
+    outline: none;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Placeholder */
+
+input::placeholder,
+textarea::placeholder {
+    color: #9aa4b6;
+}
+
+
+/* Focus Effect */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #8078ff;
+    box-shadow: 0 0 0 3px #4f46e51a;
+}
+
+
+/* Textarea */
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+/* =========================================
+   13. FORM FOOTER
+========================================= */
+
+.form-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.form-footer p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+
+/* =========================================
+   14. BUTTONS
+========================================= */
+
+.primary-btn,
+.secondary-btn,
+.danger-btn {
+    border: none;
+    border-radius: 10px;
+
+    padding: 12px 17px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease;
+}
+
+
+/* Primary Button */
+
+.primary-btn {
+    background: var(--primary);
+    color: var(--white);
+
+    box-shadow: 0 5px 12px #4f46e526;
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.primary-btn span {
+    margin-left: 8px;
+}
+
+
+/* Secondary Button */
+
+.secondary-btn {
+    background: #eef0f8;
+    color: #35405a;
+}
+
+.secondary-btn:hover {
+    background: #e2e6f2;
+}
+
+
+/* Danger Button */
+
+.danger-btn {
+    background: #fff0ef;
+    color: var(--red);
+}
+
+.danger-btn:hover {
+    background: #ffe2df;
+}
+
+
+/* =========================================
+   15. SUCCESS AND ERROR MESSAGES
+========================================= */
+
+.message {
+    margin-top: 12px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.message.success {
+    color: var(--green);
+}
+
+.message.error {
+    color: var(--red);
+}
+
+
+/* =========================================
+   16. TRACK COMPLAINT FORM
+========================================= */
+
+.track-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr auto;
+
+    gap: 16px;
+    align-items: end;
+}
+
+
+/* Complaint Tracking Result */
+
+.result-card {
+    border: 1px solid var(--line);
+    border-radius: 13px;
+
+    padding: 20px;
+    margin-top: 22px;
+
+    background: #fff;
+}
+
+.result-head {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.result-card h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.result-card p {
+    margin: 7px 0;
+
+    color: #536078;
+    font-size: 14px;
+}
+
+.result-card small {
+    color: var(--muted);
+}
+
+
+/* =========================================
+   17. COMPLAINT STATUS LABELS
+========================================= */
+
+.status {
+    display: inline-block;
+
+    border-radius: 30px;
+    padding: 5px 10px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    background: #eef0f8;
+    color: #4b5870;
+
+    white-space: nowrap;
+}
+
+
+/* Submitted */
+
+.status.submitted {
+    background: #fff2d7;
+    color: #8c5700;
+}
+
+
+/* In Progress */
+
+.status.in-progress {
+    background: #e5edff;
+    color: #264db5;
+}
+
+
+/* Resolved */
+
+.status.resolved {
+    background: #dff7eb;
+    color: #126b47;
+}
+
+
+/* Rejected */
+
+.status.rejected {
+    background: #ffe6e3;
+    color: #a32920;
+}
+
+
+/* =========================================
+   18. ADMIN LOGIN
+========================================= */
+
+.login-panel {
+    max-width: 470px;
+}
+
+.login-panel h3 {
+    margin-bottom: 8px;
+    font-size: 21px;
+}
+
+.muted {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.login-panel form {
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   19. ADMIN DASHBOARD
+========================================= */
+
+.dashboard-top {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Statistics Grid */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+
+    gap: 14px;
+    flex: 1;
+}
+
+
+/* Individual Statistics Card */
+
+.stat-card {
+    background: var(--white);
+
+    border: 1px solid var(--line);
+    border-radius: 14px;
+
+    padding: 17px;
+}
+
+.stat-card span {
+    font-size: 12px;
+    color: var(--muted);
+
+    display: block;
+}
+
+.stat-card strong {
+    display: block;
+
+    font-size: 27px;
+    font-family: 'Manrope', sans-serif;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   20. COMPLAINT TABLE HEADING
+========================================= */
+
+.table-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.table-heading h3 {
+    font-size: 19px;
+}
+
+
+/* Status Filter */
+
+.filter-label {
+    min-width: 150px;
+}
+
+
+/* =========================================
+   21. TABLE WRAPPER
+========================================= */
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   22. COMPLAINT TABLE
+========================================= */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    font-size: 12px;
+    min-width: 940px;
+}
+
+
+/* Table Header */
+
+th {
+    text-align: left;
+
+    color: #657087;
+    font-size: 10px;
+
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+
+    background: #f8f9fc;
+}
+
+
+/* Table Cells */
+
+th,
+td {
+    padding: 13px 10px;
+
+    border-bottom: 1px solid var(--line);
+
+    vertical-align: top;
+}
+
+
+/* Table Data */
+
+td {
+    max-width: 210px;
+    overflow-wrap: anywhere;
+}
+
+
+/* Secondary Text Inside Table */
+
+td small {
+    display: block;
+
+    color: var(--muted);
+
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+
+/* Table Inputs */
+
+td select,
+td input {
+    min-width: 120px;
+
+    padding: 8px;
+    font-size: 12px;
+}
+
+
+/* Save Button */
+
+td .save-btn {
+    margin-top: 7px;
+
+    padding: 7px 10px;
+    font-size: 11px;
+}
+
+
+/* Empty Table Message */
+
+.empty-state {
+    text-align: center;
+
+    padding: 24px;
+
+    color: var(--muted);
+}
+
+
+/* =========================================
+   23. ADMIN ACTION BUTTONS
+========================================= */
+
+.export-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 12px;
+    margin-top: 18px;
+}
+
+
+/* =========================================
+   24. IMPORTANT NOTICE
+========================================= */
+
+.notice {
+    display: flex;
+
+    gap: 13px;
+
+    background: #f0f2ff;
+
+    border: 1px solid #e0e3ff;
+    border-radius: 13px;
+
+    padding: 17px 20px;
+
+    margin: 28px 0 8px;
+}
+
+
+/* Notice Icon */
+
+.notice-icon {
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: #dcdcff;
+    color: #4038b8;
+
+    font-weight: 800;
+}
+
+
+/* Notice Text */
+
+.notice strong {
+    font-size: 13px;
+}
+
+.notice p {
+    font-size: 12px;
+
+    color: #59637e;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   25. FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+
+    padding: 24px;
+
+    color: #8992a5;
+    font-size: 12px;
+
+    border-top: 1px solid var(--line);
+
+    background: var(--white);
+}
+
+
+/* =========================================
+   26. TABLE ROW HOVER EFFECT
+========================================= */
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #fafaff;
+}
+
+
+/* =========================================
+   27. RESPONSIVE DESIGN - TABLETS
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .site-header {
+        padding: 18px 24px;
+    }
+
+    .hero {
+        padding: 35px 30px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+
+    .track-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .track-form button {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================
+   28. RESPONSIVE DESIGN - MOBILE
+========================================= */
+
+@media screen and (max-width: 760px) {
+
+    /* Header */
+
+    .site-header {
+        padding: 15px 18px;
+    }
+
+    .brand h1 {
+        font-size: 18px;
+    }
+
+    .site-header nav {
+        width: 100%;
+    }
+
+    .nav-btn {
+        flex: 1;
+
+        padding: 9px 5px;
+
+        font-size: 12px;
+    }
+
+
+    /* Main Container */
+
+    .container {
+        padding: 20px 14px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 30px 24px;
+
+        display: block;
+
+        border-radius: 18px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero-card {
+        margin-top: 25px;
+        max-width: none;
+    }
+
+
+    /* Section Headings */
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+
+    /* Panels */
+
+    .panel {
+        padding: 20px;
+    }
+
+
+    /* Complaint Form */
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .form-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .form-footer button {
+        width: 100%;
+    }
+
+
+    /* Tracking Form */
+
+    .track-form {
+        grid-template-columns: 1fr;
+    }
+
+    .track-form button {
+        grid-column: auto;
+        width: 100%;
+    }
+
+
+    /* Dashboard */
+
+    .dashboard-top {
+        flex-direction: column;
+    }
+
+    .stats {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-top > button {
+        width: 100%;
+    }
+
+
+    /* Table Heading */
+
+    .table-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filter-label {
+        width: 100%;
+    }
+
+
+    /* Admin Buttons */
+
+    .export-row {
+        flex-direction: column;
+    }
+
+    .export-row button {
+        width: 100%;
+    }
+
+
+    /* Notice */
+
+    .notice {
+        padding: 15px;
+    }
+
+}
+
+
+/* =========================================
+   29. EXTRA SMALL MOBILE SCREENS
+========================================= */
+
+@media screen and (max-width: 380px) {
+
+    .hero {
+        padding: 24px 18px;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+
+    .nav-btn {
+        font-size: 10px;
+    }
+
+    .stats {
+        gap: 8px;
+    }
+
+    .stat-card {
+        padding: 12px;
+    }
+
+    .stat-card strong {
+        font-size: 23px;
+    }
+
+}

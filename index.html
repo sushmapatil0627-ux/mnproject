@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Complaint Management System</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="mn_style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="brand">
+
+            <div class="brand-mark">CC</div>
+
+            <div>
+                <h1>CampusCare</h1>
+                <p>College Complaint Management System</p>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+
+        <nav>
+
+            <button class="nav-btn active"
+                data-view="studentView">
+                Student Portal
+            </button>
+
+            <button class="nav-btn"
+                data-view="trackView">
+                Track Complaint
+            </button>
+
+            <button class="nav-btn"
+                data-view="adminView">
+                Admin Panel
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= HERO SECTION ================= -->
+
+        <section class="hero">
+
+            <div>
+
+                <span class="eyebrow">
+                    YOUR VOICE MATTERS
+                </span>
+
+                <h2>
+                    A better campus
+                    <br>
+                    <span>starts with you.</span>
+                </h2>
+
+                <p>
+                    Report campus issues, follow their progress,
+                    and help make college life better for everyone.
+                </p>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="hero-icon">✦</div>
+
+                <strong>
+                    One campus. One community.
+                </strong>
+
+                <p>
+                    Submit a complaint and let the right team
+                    know what needs attention.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- STUDENT PORTAL -->
+        <!-- ================================================= -->
+
+        <section id="studentView" class="view active-view">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        STUDENT PORTAL
+                    </span>
+
+                    <h2>Submit a Complaint</h2>
+
+                </div>
+
+                <span class="pill">
+                    Takes 2 minutes
+                </span>
+
+            </div>
+
+
+            <div class="panel">
+
+                <form id="complaintForm">
+
+                    <div class="form-grid">
+
+
+                        <!-- Student Name -->
+
+                        <label for="studentName">
+
+                            Student Full Name
+
+                            <input
+                                type="text"
+                                id="studentName"
+                                name="studentName"
+                                placeholder="Enter your name"
+                                maxlength="80"
+                                required
+                            >
+
+                        </label>
+
+
+
+                        <!-- Student ID -->
+
+                        <label for="studentId">
+
+                            USN / Student ID
+
+                            <input
+                                type="text"
+                                id="studentId"
+                                name="studentId"
+                                placeholder="Example: 2VS24CS099"
+                                maxlength="30"
+                                required
+                            >
+
+                        </label>
+
+
+
+                        <!-- Department -->
+
+                        <label for="department">
+
+                            Department
+
+                            <select
+                                id="department"
+                                name="department"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Department
+                                </option>
+
+                                <option value="CSE">CSE</option>
+
+                                <option value="AIML">AIML</option>
+
+                                <option value="EC">EC</option>
+
+                                <option value="Mechanical"> Mechanical</option>
+
+                                <option value="Civil">Civil</option>
+
+                                <option value="Other">Other</option>
+
+                            </select>
+
+                        </label>
+
+
+
+                        <!-- Complaint Category -->
+
+                        <label for="category">
+
+                            Complaint Category
+
+                            <select
+                                id="category"
+                                name="category"
+                                required
+                            >
+
+                                <option value="">
+                                    Choose a Category
+                                </option>
+
+                                <option value="Infrastructure">
+                                    Infrastructure
+                                </option>
+
+                                <option value="Hostel">
+                                    Hostel
+                                </option>
+
+                                <option value="Transport">
+                                    Transport
+                                </option>
+
+                                <option value="Cleanliness">
+                                    Cleanliness
+                                </option>
+
+                                <option value="Internet / Wi-Fi">
+                                    Internet / Wi-Fi
+                                </option>
+
+                                <option value="Academic">
+                                    Academic
+                                </option>
+
+                                <option value="Harassment / Safety">
+                                    Harassment / Safety
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+
+                        <!-- Location -->
+
+                        <label for="location">
+
+                            Location / Block
+
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                placeholder="Example: MAIN BUILDING"
+                                maxlength="100"
+                                required
+                            >
+
+                        </label>
+
+
+
+                        <!-- Priority -->
+
+                        <label for="priority">
+
+                            Complaint Priority
+
+                            <select
+                                id="priority"
+                                name="priority"
+                                required
+                            >
+
+                                <option value="Normal">
+                                    Normal
+                                </option>
+
+                                <option value="High">
+                                    High
+                                </option>
+
+                                <option value="Urgent">
+                                    Urgent
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+
+                        <!-- Complaint Title -->
+
+                        <label
+                            for="title"
+                            class="full-width"
+                        >
+
+                            Complaint Title
+
+                            <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                placeholder="Briefly describe the issue"
+                                maxlength="120"
+                                required
+                            >
+
+                        </label>
+
+
+
+                        <!-- Complaint Description -->
+
+                        <label
+                            for="description"
+                            class="full-width"
+                        >
+
+                            Complaint Description
+
+                            <textarea
+                                id="description"
+                                name="description"
+                                rows="5"
+                                minlength="10"
+                                maxlength="1500"
+                                placeholder="Explain the problem and provide useful details..."
+                                required
+                            ></textarea>
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <!-- Form Footer -->
+
+                    <div class="form-footer">
+
+                        <p>
+                            Your complaint ID will be generated
+                            after submission.
+                        </p>
+
+                        <button
+                            type="submit"
+                            class="primary-btn"
+                        >
+
+                            Submit Complaint
+
+                            <span>→</span>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- Success / Error Message -->
+
+                    <div
+                        id="formMessage"
+                        class="message"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- TRACK COMPLAINT -->
+        <!-- ================================================= -->
+
+        <section id="trackView" class="view">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        STATUS UPDATES
+                    </span>
+
+                    <h2>Track Your Complaint</h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="panel">
+
+                <form id="trackForm" class="track-form">
+
+
+                    <!-- Complaint ID -->
+
+                    <label for="trackId">
+
+                        Complaint ID
+
+                        <input
+                            type="text"
+                            id="trackId"
+                            name="trackId"
+                            placeholder="Example: CC-ABC123"
+                            required
+                        >
+
+                    </label>
+
+
+
+                    <!-- Student ID -->
+
+                    <label for="trackStudentId">
+
+                        Student ID / USN
+
+                        <input
+                            type="text"
+                            id="trackStudentId"
+                            name="trackStudentId"
+                            placeholder="Enter your student ID"
+                            required
+                        >
+
+                    </label>
+
+
+
+                    <!-- Track Button -->
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+
+                        Find Complaint
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- Complaint Details Display -->
+
+                <div id="trackResult"></div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- ADMIN PANEL -->
+        <!-- ================================================= -->
+
+        <section id="adminView" class="view">
+
+
+            <!-- Admin Heading -->
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        STAFF WORKSPACE
+                    </span>
+
+                    <h2>Admin Panel</h2>
+
+                </div>
+
+                <span class="pill">
+                    Demo Mode
+                </span>
+
+            </div>
+
+
+
+            <!-- ================= ADMIN LOGIN ================= -->
+
+            <div
+                id="adminLogin"
+                class="panel login-panel"
+            >
+
+                <h3>Administrator Sign In</h3>
+
+                <p class="muted">
+
+                    Demo credentials:
+
+                    <strong>admin@college.edu</strong>
+
+                    /
+
+                    <strong>admin123</strong>
+
+                </p>
+
+
+
+                <form id="loginForm">
+
+
+                    <!-- Admin Email -->
+
+                    <label for="adminEmail">
+
+                        Admin Email
+
+                        <input
+                            type="email"
+                            id="adminEmail"
+                            name="adminEmail"
+                            placeholder="Enter admin email"
+                            required
+                        >
+
+                    </label>
+
+
+
+                    <!-- Admin Password -->
+
+                    <label for="adminPassword">
+
+                        Password
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            name="adminPassword"
+                            placeholder="Enter password"
+                            required
+                        >
+
+                    </label>
+
+
+
+                    <!-- Login Button -->
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+
+                        Sign In
+
+                    </button>
+
+
+
+                    <!-- Login Error Message -->
+
+                    <div
+                        id="loginMessage"
+                        class="message"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- ================= ADMIN DASHBOARD ================= -->
+
+            <div id="adminDashboard" hidden>
+
+
+                <!-- Dashboard Statistics -->
+
+                <div class="dashboard-top">
+
+
+                    <div class="stats">
+
+
+                        <!-- Total Complaints -->
+
+                        <div class="stat-card">
+
+                            <span>
+                                Total Complaints
+                            </span>
+
+                            <strong id="totalCount">
+                                0
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- Pending Complaints -->
+
+                        <div class="stat-card">
+
+                            <span>
+                                Pending
+                            </span>
+
+                            <strong id="pendingCount">
+                                0
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- In Progress Complaints -->
+
+                        <div class="stat-card">
+
+                            <span>
+                                In Progress
+                            </span>
+
+                            <strong id="progressCount">
+                                0
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- Resolved Complaints -->
+
+                        <div class="stat-card">
+
+                            <span>
+                                Resolved
+                            </span>
+
+                            <strong id="resolvedCount">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Logout Button -->
+
+                    <button
+                        type="button"
+                        id="logoutBtn"
+                        class="secondary-btn"
+                    >
+
+                        Sign Out
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- ================= COMPLAINT TABLE ================= -->
+
+                <div class="panel">
+
+
+                    <div class="table-heading">
+
+                        <h3>All Complaints</h3>
+
+
+
+                        <!-- Status Filter -->
+
+                        <label
+                            for="statusFilter"
+                            class="filter-label"
+                        >
+
+                            Filter
+
+                            <select id="statusFilter">
+
+                                <option value="All">
+                                    All Statuses
+                                </option>
+
+                                <option value="Submitted">
+                                    Submitted
+                                </option>
+
+                                <option value="In Progress">
+                                    In Progress
+                                </option>
+
+                                <option value="Resolved">
+                                    Resolved
+                                </option>
+
+                                <option value="Rejected">
+                                    Rejected
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <!-- Complaints Table -->
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>ID / Date</th>
+
+                                    <th>Student</th>
+
+                                    <th>Complaint</th>
+
+                                    <th>Priority</th>
+
+                                    <th>Status</th>
+
+                                    <th>Admin Note</th>
+
+                                    <th>Action</th>
+
+                                </tr>
+
+                            </thead>
+
+
+
+                            <tbody id="complaintTableBody">
+
+                                <!-- JavaScript inserts complaint rows here -->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- Empty State -->
+
+                    <p
+                        id="emptyAdmin"
+                        class="empty-state"
+                        hidden
+                    >
+
+                        No complaints match this filter.
+
+                    </p>
+
+
+
+                    <!-- Admin Actions -->
+
+                    <div class="export-row">
+
+
+                        <!-- Export CSV -->
+
+                        <button
+                            type="button"
+                            id="exportBtn"
+                            class="secondary-btn"
+                        >
+
+                            Export CSV
+
+                        </button>
+
+
+
+                        <!-- Delete Demo Data -->
+
+                        <button
+                            type="button"
+                            id="clearBtn"
+                            class="danger-btn"
+                        >
+
+                            Delete All Demo Data
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- IMPORTANT NOTICE -->
+        <!-- ================================================= -->
+
+        <section class="notice">
+
+
+            <div class="notice-icon">
+
+                i
+
+            </div>
+
+
+
+            <div>
+
+                <strong>Important Notice</strong>
+
+                <p>
+
+                    This student project stores demo records in
+                    this browser only. Do not enter sensitive
+                    personal information. For real deployment,
+                    connect a secure backend and database.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © <span id="year"></span>
+
+            CampusCare · College Complaint Management System
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="mn.js"></script>
+
+
+</body>
+
+</html>
